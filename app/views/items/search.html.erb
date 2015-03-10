@@ -1,0 +1,9 @@
+<%= form_tag("/items/search/:kind",method: "get") do %>
+<!-- 	<%= label_tag(:title, "Search for:") %>
+	<%= text_field_tag(:title)%>
+	<br>
+	<%= label_tag(:kind, "Search by kind:") %> -->
+	<%= collection_select(:item, :id, @items, :id, :id, {:prompt => true}) %>
+<%= submit_tag("Search yo")%> 
+
+<% end %>
